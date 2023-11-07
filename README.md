@@ -1,0 +1,2 @@
+# HeartAttackAnalysisPrediction
+  This repository contains code and data for a machine learning classification algorithm selection activity on the Heart Attack Analysis & Prediction Dataset. The goal of the activity is to put on practice validation methods and algorithm evaluation on logistic regression. The code in this repository implements the above steps in Python. The data is also provided in Jupyter format.
