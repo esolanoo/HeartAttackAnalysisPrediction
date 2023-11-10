@@ -165,7 +165,7 @@ De igual manera se visualizaron las respresentaciones de variables no numéricas
 ![Gráfica de dispersión de kernel de variables numericas](https://raw.githubusercontent.com/esolanoo/HeartAttackAnalysisPrediction/main/Categorical%20Histogram%20Pairplot.png)
 *Gráfica de histogramas de variables no numéricas*
 
-![Gráfica de dispersión de kernel de variables numericas](https://raw.githubusercontent.com/esolanoo/HeartAttackAnalysisPrediction/main/Categorical%20Histogram%20Pairplot.png)
+![Gráfica de dispersión de kernel de variables numericas](https://raw.githubusercontent.com/esolanoo/HeartAttackAnalysisPrediction/main/Categorical%20Scatter%20Pairplot.png)
 *Gráfica de dispersión de gráficas no numéricas*
 
 ![Gráfica de dispersión de kernel de variables numericas](https://raw.githubusercontent.com/esolanoo/HeartAttackAnalysisPrediction/main/Categorical%20Histogram%20Pairplot.png)
