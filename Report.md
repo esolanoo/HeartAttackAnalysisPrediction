@@ -160,6 +160,8 @@ Finalmente se usa la estimación de densidad kernel (KDE) `seaborn.pairplot(df[n
 
 De igual manera se visualizaron las respresentaciones de variables no numéricas pero no se pueden obtener las mismas conslusiones debido a la falta de significado en las gráficas pues, a diferencia de las variables numéricas continuas, las variables categóricas no muestran una relación directa o patrones claros en los gráficos de dispersión, histogramas y kde. La naturaleza discreta y la ausencia de continuidad en los datos categóricos dificultan la representación visual significativa de tendencias o correlaciones a través de estas formas de visualización.
 
+Se agregan las gráficas de igual manera para completar el reporte.
+
 <center>
 
 ![Gráfica de dispersión de kernel de variables numericas](https://raw.githubusercontent.com/esolanoo/HeartAttackAnalysisPrediction/main/Categorical%20Histogram%20Pairplot.png)
@@ -172,3 +174,9 @@ De igual manera se visualizaron las respresentaciones de variables no numéricas
 *Gráfica de debsidad de kernel de variables no numéricas*
 
 </center>
+
+## Transformacion de datos
+
+Se utilizó `ColumnTransformer` de Scikit-learn para aplicar transformaciones específicas a diferentes columnas de tu conjunto de datos. Para justificar el uso de `OneHotEncoder` en tus datos categóricos, podrías mencionar que esta técnica convierte variables categóricas en representaciones numéricas binarias, lo que es crucial para que los algoritmos de aprendizaje automático puedan interpretarlas adecuadamente, ya que muchos modelos no pueden trabajar directamente con datos categóricos.
+
+En cuanto al `StandardScaler`, podrías explicar que se utilizó para estandarizar las variables numéricas, es decir, para llevarlas a una escala común, lo que ayuda a los modelos a interpretar todas las variables con la misma importancia y a evitar que alguna variable domine simplemente debido a su escala original. Esto mejora el rendimiento de los algoritmos que se basan en cálculos de distancia o en la magnitud de las características.
