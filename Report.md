@@ -194,3 +194,17 @@ def Transform(data):
         
 df_t = Transform(df)
 ```
+
+# Matriz de correlación
+
+Antes de seguir el procesamiento y comenzar a entrenar se realizó una matriz de correlación vara ver cuales podrían ser eliminadas debido a su alta correlación y poder simplificar el modelo. Desafortunadamente para ese objetivo, las variables no resultaron mutuamente correlacionadas; sin embargo, se puede utilizar el valor de relevancia que tienen las variables con la variable objetivo para descartar las que no son relevates.
+
+<center>
+
+![Matriz de correlación](https://raw.githubusercontent.com/esolanoo/HeartAttackAnalysisPrediction/main/Heatmap.png)
+*Matriz de correlación de las variables*
+
+</center>
+
+Se establece las variables no relevantes aquellas que su indice de correlación con respecto a la variable objetivo es menor a **0.05**, descartando las variables `['thall_0', 'fbs']` del *DataFrame*
+
