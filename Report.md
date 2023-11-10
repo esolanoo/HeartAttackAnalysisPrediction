@@ -177,6 +177,20 @@ Se agregan las gráficas de igual manera para completar el reporte.
 
 ## Transformacion de datos
 
-Se utilizó `ColumnTransformer` de Scikit-learn para aplicar transformaciones específicas a diferentes columnas de tu conjunto de datos. Para justificar el uso de `OneHotEncoder` en tus datos categóricos, podrías mencionar que esta técnica convierte variables categóricas en representaciones numéricas binarias, lo que es crucial para que los algoritmos de aprendizaje automático puedan interpretarlas adecuadamente, ya que muchos modelos no pueden trabajar directamente con datos categóricos.
+Se utilizó `ColumnTransformer` de Scikit-learn para aplicar transformaciones específicas a diferentes columnas de tu conjunto de datos. Especificamente se implementó `OneHotEncoder` en los datos categóricos; esta técnica convierte variables categóricas en representaciones numéricas binarias, lo que es crucial para que el algoritmo pueda interpretar las variables adecuadamente. Se aplicó en las variables `onehot =  ['cp', 'restecg', 'slp', 'caa', 'thall']`
 
-En cuanto al `StandardScaler`, podrías explicar que se utilizó para estandarizar las variables numéricas, es decir, para llevarlas a una escala común, lo que ayuda a los modelos a interpretar todas las variables con la misma importancia y a evitar que alguna variable domine simplemente debido a su escala original. Esto mejora el rendimiento de los algoritmos que se basan en cálculos de distancia o en la magnitud de las características.
+En cuanto al `StandardScaler`, se utilizó para estandarizar las variables numéricas, es decir, para llevarlas a una escala común, lo que ayuda al modelo a interpretar todas las variables con la misma importancia y a evitar que alguna variable domine simplemente debido a su escala original. Se aplicó con las variables `numeric = ['age', 'trtbps',	'chol', 'thalachh',	'oldpeak']`
+
+```python
+def Transform(data):
+    ct = ColumnTransformer(transformers=
+                        [('numeric', StandardScaler(), numeric),
+                        ('work', OneHotEncoder(), onehot)],
+                        remainder='passthrough')
+
+    data_t = pd.DataFrame(ct.fit_transform(data))
+    data_t.columns = [s[s.find('_')+2:] for s in list(ct.get_feature_names_out())]
+    return data_t
+        
+df_t = Transform(df)
+```
