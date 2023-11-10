@@ -163,6 +163,6 @@ De igual manera se visualizaron las respresentaciones de variables no numéricas
 <center>
 
 ![Gráfica de dispersión de kernel de variables numericas](https://raw.githubusercontent.com/esolanoo/HeartAttackAnalysisPrediction/main/Categorical%20Histogram%20Pairplot.png)
-*Gráfica de densidad kernel de variables numericas*
+*Gráfica de histogramas de de variables no numéricas*
 
 </center>
