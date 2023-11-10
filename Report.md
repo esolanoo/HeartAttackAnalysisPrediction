@@ -159,3 +159,10 @@ Finalmente se usa la estimación de densidad kernel (KDE) `seaborn.pairplot(df[n
 </center>
 
 De igual manera se visualizaron las respresentaciones de variables no numéricas pero no se pueden obtener las mismas conslusiones debido a la falta de significado en las gráficas pues, a diferencia de las variables numéricas continuas, las variables categóricas no muestran una relación directa o patrones claros en los gráficos de dispersión, histogramas y kde. La naturaleza discreta y la ausencia de continuidad en los datos categóricos dificultan la representación visual significativa de tendencias o correlaciones a través de estas formas de visualización.
+
+<center>
+
+![Gráfica de dispersión de kernel de variables numericas](Numeric Histogram Pairplot.png)
+*Gráfica de densidad kernel de variables numericas*
+
+</center>
