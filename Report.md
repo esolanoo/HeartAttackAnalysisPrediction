@@ -267,4 +267,11 @@ Al usar cohen_kappa_score obtenemos **0.7124**. Esto indica que el modelo ha log
 
 # Curva ROC
 
-Finalmente podemos 
+Finalmente se usa 'roc_curve' para medir el desempeño del algoritmo. La gráfica ROC muestra que el modelo de clasificación binaria tiene un buen desempeño, ya que la curva ROC está muy por encima de la línea diagonal y tiene un AUC cercano a 1. Esto indica que el modelo puede separar las clases con una alta tasa de verdaderos positivos y una baja tasa de falsos positivos.
+
+<center>
+
+![Curva ROC](https://raw.githubusercontent.com/esolanoo/HeartAttackAnalysisPrediction/main/Model%20Roc%20Curve.png)
+*Curva ROC*
+
+</center>
