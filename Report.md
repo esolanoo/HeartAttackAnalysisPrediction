@@ -12,6 +12,8 @@
 
 ---
 
+\newpage
+
 ## Objetivo
 
 El objetivo de este reporte es utilizar el dataset de [Heart Attack Analysis & Prediction Dataset](https://www.kaggle.com/datasets/rashikrahmanpritom/heart-attack-analysis-prediction-dataset?select=heart.csv) para entrenar un modelo de algoritmo de clasificación de machine learning que prediga si una persona está en riesgo de tener un ataque cardíaco o no.
@@ -34,6 +36,8 @@ Los pasos a seguir para completar este reporte son los siguientes:
 - Entrenamiento del modelo.
 - Evaluación del modelo usando métodos de validación (técnicas de remuestreo).
 - Análisis de los resultados para determinar su utilidad para la predicción de ataques cardíacos.
+
+\newpage
 
 ## Análisis de variables
 
@@ -276,6 +280,8 @@ Finalmente se usa 'roc_curve' para medir el desempeño del algoritmo. La gráfic
 
 </center>
 
+\newpage
+
 ## Conclusiones
 
 Basado en los análisis realizados, se destaca la solidez del modelo de regresión logística empleado en este estudio. Las evaluaciones, tanto mediante la separación tradicional de datos en conjuntos de entrenamiento y prueba, como a través de técnicas más robustas como la validación cruzada estándar y con repeticiones, han revelado un rendimiento consistente en torno al **84%** de precisión. Este resultado demuestra la capacidad del modelo para generalizar y realizar predicciones precisas en diferentes escenarios, lo que respalda su aplicabilidad en entornos del mundo real.
@@ -283,6 +289,8 @@ Basado en los análisis realizados, se destaca la solidez del modelo de regresi�
 No obstante, la matriz de confusión revela cierta discrepancia entre los verdaderos positivos y negativos, y los falsos positivos y negativos. Aunque el modelo muestra una capacidad equitativa para clasificar correctamente tanto instancias positivas como negativas, la presencia significativa de falsos positivos y falsos negativos sugiere áreas para la mejora del modelo, especialmente en la reducción de estos errores.
 
 Si bien el modelo creado a partir de los datos trabajados y transforados demostró ser consistente y preciso, se sugiere una optimización adicional para reducir los falsos positivos y falsos negativos, lo que contribuiría a mejorar aún más su capacidad de predicción y su aplicabilidad en situaciones del mundo real.
+
+\newpage
 
 ## Referencias 
 
