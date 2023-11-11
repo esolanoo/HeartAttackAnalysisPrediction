@@ -236,7 +236,7 @@ lr = LogisticRegression()
 lr.fit(X_train, y_train)
 ```
 
-# Validación por porcentaje
+### Validación por porcentaje
 
 Mediante el empleo de `score(X_test, y_test)`, se logró calcular un puntaje de precisión de **0.85246**. Este puntaje representa la capacidad del modelo para predecir con exactitud los valores en el conjunto de datos de prueba. Un valor de 0.85246 indica que el modelo fue capaz de predecir correctamente aproximadamente el 85.25% de las instancias en el conjunto de prueba, subrayando así su capacidad para generalizar y realizar predicciones precisas sobre datos no vistos.
 
@@ -244,13 +244,13 @@ Mediante el empleo de `score(X_test, y_test)`, se logró calcular un puntaje de 
 
 Aplicando la validación cruzada con repeticiones, se obtuvo una precisión promedio del **84.52%**, con una desviación estándar de **0.0444**. Este resultado, derivado de múltiples iteraciones de validación cruzada, muestra que el modelo mantiene un nivel constante de precisión alrededor del **84.52%**, evidenciando su capacidad para realizar predicciones consistentes en diferentes conjuntos de datos. La pequeña desviación estándar indica una consistencia en el rendimiento del modelo durante estas iteraciones, lo que respalda su estabilidad y confiabilidad en la generalización de predicciones. Para este método se uso `ShuffleSplit(n_splits=1000, test_size=0.2)`.
 
-# Validación cruzada y validación cruzada con repeticiones
+### Validación cruzada y validación cruzada con repeticiones
 
 Al emplear la validación cruzada `KFold(n_splits=10, shuffle=True)`, se logró obtener un puntaje de precisión del 84.84%, con una desviación estándar de **0.0872**, mientras que al aplicar la validación cruzada con repeticiones `ShuffleSplit(n_splits=1000, test_size=1/3)`, se obtuvo un puntaje de precisión del 84.12% con una desviación estándar de **0.0313**. Estos resultados resaltan la consistencia del modelo, mostrando que, en promedio, logra una precisión cercana al *88.4%**. Sin embargo, la validación cruzada estándar muestra una desviación estándar ligeramente mayor, una precisión más variada a lo largo de las iteraciones. Y la validación estándar con repeticiones tiene una mayor estabilidad en el rendimiento del modelo en diferentes subconjuntos de datos.
 
 ## Métricas para evaluación de algóritmos
 
-# Matriz de confución
+### Matriz de confución
 
 Usando `confusion_matrix` de `sklearn.metric` se obtiene:
 
@@ -261,11 +261,11 @@ Usando `confusion_matrix` de `sklearn.metric` se obtiene:
 
 Esto significa que el modelo acertó en clasificar correctamente 148 instancias como positivas y 112 como negativas. Sin embargo, se equivocó al clasificar 26 instancias como positivas cuando en realidad eran negativas (falsos positivos) y 17 como negativas cuando en realidad eran positivas (falsos negativos).
 
-# Cohen Score
+### Cohen Score
 
 Al usar cohen_kappa_score obtenemos **0.7124**. Esto indica que el modelo ha logrado un grado notable de precisión más allá de lo que podría explicarse por el azar ya que el puntaje de Cohen's Kappa es una medida de la fiabilidad de la clasificación del modelo, considerando la posibilidad de aciertos simplemente por casualidad, y en este caso, el score muestra una consistencia significativa en las predicciones del modelo.
 
-# Curva ROC
+### Curva ROC
 
 Finalmente se usa 'roc_curve' para medir el desempeño del algoritmo. La gráfica ROC muestra que el modelo de clasificación binaria tiene un buen desempeño, ya que la curva ROC está muy por encima de la línea diagonal y tiene un AUC cercano a 1. Esto indica que el modelo puede separar las clases con una alta tasa de verdaderos positivos y una baja tasa de falsos positivos.
 
