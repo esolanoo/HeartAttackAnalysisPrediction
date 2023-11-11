@@ -275,3 +275,19 @@ Finalmente se usa 'roc_curve' para medir el desempeño del algoritmo. La gráfic
 *Curva ROC*
 
 </center>
+
+## Conclusiones
+
+Basado en los análisis realizados, se destaca la solidez del modelo de regresión logística empleado en este estudio. Las evaluaciones, tanto mediante la separación tradicional de datos en conjuntos de entrenamiento y prueba, como a través de técnicas más robustas como la validación cruzada estándar y con repeticiones, han revelado un rendimiento consistente en torno al **84%** de precisión. Este resultado demuestra la capacidad del modelo para generalizar y realizar predicciones precisas en diferentes escenarios, lo que respalda su aplicabilidad en entornos del mundo real.
+
+No obstante, la matriz de confusión revela cierta discrepancia entre los verdaderos positivos y negativos, y los falsos positivos y negativos. Aunque el modelo muestra una capacidad equitativa para clasificar correctamente tanto instancias positivas como negativas, la presencia significativa de falsos positivos y falsos negativos sugiere áreas para la mejora del modelo, especialmente en la reducción de estos errores.
+
+Si bien el modelo creado a partir de los datos trabajados y transforados demostró ser consistente y preciso, se sugiere una optimización adicional para reducir los falsos positivos y falsos negativos, lo que contribuiría a mejorar aún más su capacidad de predicción y su aplicabilidad en situaciones del mundo real.
+
+## Referencias 
+
+> 1. Scikit-learn: Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., ... & Vanderplas, J. (2011). Scikit-learn: Machine learning in Python. Journal of Machine Learning Research, 12(Oct), 2825-2830. [Enlace a la documentación de Scikit-learn](https://scikit-learn.org/stable/documentation.html).
+
+> 2. Seaborn: Waskom, M., 2022. seaborn: statistical data visualization. [Enlace a la documentación de Seaborn](https://seaborn.pydata.org/introduction.html).
+
+> 3. Hastie, T., Tibshirani, R., & Friedman, J. (2009). The Elements of Statistical Learning: Data Mining, Inference, and Prediction (2nd ed.). Springer. ISBN: 978-0387848570.
