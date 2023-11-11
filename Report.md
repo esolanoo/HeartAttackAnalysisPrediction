@@ -37,7 +37,7 @@ Los pasos a seguir para completar este reporte son los siguientes:
 - Evaluación del modelo usando métodos de validación (técnicas de remuestreo).
 - Análisis de los resultados para determinar su utilidad para la predicción de ataques cardíacos.
 
-\newpage
+<div style="page-break-after: always;"></div>
 
 ## Análisis de variables
 
@@ -121,6 +121,8 @@ La tabla proporciona los valores de **conteo**, **media**, **desviación estánd
 - **Ca**: El número de vasos principales coloreados por flourosopía tiene una media de 0.7 y una desviación estándar de 1.0. El valor más bajo registrado es de 0 y el más alto es de 4.
 - **Thal**: El 54.5% de los pacientes tiene un resultado normal, el 38.1% tiene un resultado defectuoso y el 7.4
 
+<div style="page-break-after: always;"></div>
+
 ## Visualización de variables
 
 ### Variables numéricas
@@ -179,6 +181,8 @@ Se agregan las gráficas de igual manera para completar el reporte.
 
 </center>
 
+<div style="page-break-after: always;"></div>
+
 ## Transformacion de datos
 
 Se utilizó `ColumnTransformer` de Scikit-learn para aplicar transformaciones específicas a diferentes columnas de tu conjunto de datos. Especificamente se implementó `OneHotEncoder` en los datos categóricos; esta técnica convierte variables categóricas en representaciones numéricas binarias, lo que es crucial para que el algoritmo pueda interpretar las variables adecuadamente. Se aplicó en las variables `onehot =  ['cp', 'restecg', 'slp', 'caa', 'thall']`
@@ -225,6 +229,8 @@ Esta transformacion solo se usó en los datos numericos continuos `numeric = ['a
 
 </center>
 
+<div style="page-break-after: always;"></div>
+
 ## Métodos de validación
 
 Se procedió a la construcción del modelo utilizando la técnica de `LogisticRegression`. Para garantizar una evaluación precisa de su rendimiento, se dividió la información en conjuntos de entrenamiento y prueba. Esta división permitió entrenar el modelo utilizando únicamente los datos de entrenamiento, lo que proporciona al modelo la capacidad de aprender patrones y características subyacentes.
@@ -244,13 +250,15 @@ lr.fit(X_train, y_train)
 
 Mediante el empleo de `score(X_test, y_test)`, se logró calcular un puntaje de precisión de **0.85246**. Este puntaje representa la capacidad del modelo para predecir con exactitud los valores en el conjunto de datos de prueba. Un valor de 0.85246 indica que el modelo fue capaz de predecir correctamente aproximadamente el 85.25% de las instancias en el conjunto de prueba, subrayando así su capacidad para generalizar y realizar predicciones precisas sobre datos no vistos.
 
-# Validación por porcentaje con repeticiones 
+### Validación por porcentaje con repeticiones 
 
 Aplicando la validación cruzada con repeticiones, se obtuvo una precisión promedio del **84.52%**, con una desviación estándar de **0.0444**. Este resultado, derivado de múltiples iteraciones de validación cruzada, muestra que el modelo mantiene un nivel constante de precisión alrededor del **84.52%**, evidenciando su capacidad para realizar predicciones consistentes en diferentes conjuntos de datos. La pequeña desviación estándar indica una consistencia en el rendimiento del modelo durante estas iteraciones, lo que respalda su estabilidad y confiabilidad en la generalización de predicciones. Para este método se uso `ShuffleSplit(n_splits=1000, test_size=0.2)`.
 
 ### Validación cruzada y validación cruzada con repeticiones
 
 Al emplear la validación cruzada `KFold(n_splits=10, shuffle=True)`, se logró obtener un puntaje de precisión del 84.84%, con una desviación estándar de **0.0872**, mientras que al aplicar la validación cruzada con repeticiones `ShuffleSplit(n_splits=1000, test_size=1/3)`, se obtuvo un puntaje de precisión del 84.12% con una desviación estándar de **0.0313**. Estos resultados resaltan la consistencia del modelo, mostrando que, en promedio, logra una precisión cercana al *88.4%**. Sin embargo, la validación cruzada estándar muestra una desviación estándar ligeramente mayor, una precisión más variada a lo largo de las iteraciones. Y la validación estándar con repeticiones tiene una mayor estabilidad en el rendimiento del modelo en diferentes subconjuntos de datos.
+
+<div style="page-break-after: always;"></div>
 
 ## Métricas para evaluación de algóritmos
 
@@ -280,7 +288,7 @@ Finalmente se usa 'roc_curve' para medir el desempeño del algoritmo. La gráfic
 
 </center>
 
-\newpage
+<div style="page-break-after: always;"></div>
 
 ## Conclusiones
 
@@ -290,7 +298,7 @@ No obstante, la matriz de confusión revela cierta discrepancia entre los verdad
 
 Si bien el modelo creado a partir de los datos trabajados y transforados demostró ser consistente y preciso, se sugiere una optimización adicional para reducir los falsos positivos y falsos negativos, lo que contribuiría a mejorar aún más su capacidad de predicción y su aplicabilidad en situaciones del mundo real.
 
-\newpage
+<div style="page-break-after: always;"></div>
 
 ## Referencias 
 
