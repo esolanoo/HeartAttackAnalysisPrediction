@@ -1,16 +1,33 @@
-# **Stroke Risk Classificator**
+<br>
+<center>
+<img src="https://reqlut2.s3.sa-east-1.amazonaws.com/reqlut-images/up/logo-original.png?v=55"
+        alt="Histograma numérico"
+        style="display: block; margin: 0 auto"
+        width=70%
+        length=70% />
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-## Machine Learning Classification Algorithm Selection
+# **Análisis de datos y clasificador de ataques cardiácos**
 
-*Eduardo Solano Jaime*
+## Minería de Datos
 
-*0213663*
+### *Eduardo Solano Jaime*
 
-*ECID*
+### *0213663*
 
-*Universidad Panamericana campus Guadalajara*
+### *Especialidad en Ciencia de Datos*
 
----
+### *Universidad Panamericana campus Guadalajara*
+
+</center>
 
 <div style="page-break-after: always;"></div>
 
@@ -24,7 +41,7 @@ Para entrenar el modelo, se utilizó regresión logística, no sin su previo an�
 
 Los resultados del modelo se analizarán para determinar su utilidad para la predicción de ataques cardíacos.
 
-El cuaderno de Jupyter completo dónde se realizaron todos los cálculos/modificaciones se encuentra en mi [repositorio de GitHub](https://github.com/esolanoo/HeartAttackAnalysisPrediction) para mayor comprensión.
+El cuaderno de Jupyter completo dónde se realizaron todos los cálculos (y las imágenes completas en tamaño original) se encuentra en mi [repositorio de GitHub](https://github.com/esolanoo/HeartAttackAnalysisPrediction) para mayor comprensión.
 
 ## Metodología
 
@@ -43,12 +60,10 @@ Los pasos a seguir para completar este reporte son los siguientes:
 
 ### Exploración del dataset
 
-Al importar el dataset se utilizó la función `DataFrame.head()`, la cual se utiliza para devolver las primeras n filas de un objeto DataFrame. El valor predeterminado de n es 5.
-
-El dataset se importó previamente y se declaró con el nombre *'df'*, de tipo `DataFrame`.
+Al importar el dataset se utilizó la función `DataFrame.head()`, la cual se utiliza para devolver las primeras n filas de un objeto DataFrame. El dataset se importó previamente y se declaró con el nombre *'df'*, de tipo `DataFrame`.
 
 ```python
-df.head(5)
+df.head()
 ```
 
 <center>
@@ -130,10 +145,12 @@ La tabla proporciona los valores de **conteo**, **media**, **desviación estánd
 Haciendo uso de la funcion `seaborn.pairplot(df[numericos], hue='stroke', kind='hist')` se puede representar las variables numéricas comparadas entre sí con respecto a su frecuencia de la siguien6te manera (aquellos con riesgo cardíaco representados en naranja y aquellos sin riesgo cardíaco representados en azul):
 
 <center>
-
-![Histograma numérico](https://github.com/esolanoo/HeartAttackAnalysisPrediction/blob/main/Numeric%20Histogram%20Pairplot.png?raw=true)
-*Histograma de variables numéricas*
-
+<img src="https://github.com/esolanoo/HeartAttackAnalysisPrediction/blob/main/Numeric%20Histogram%20Pairplot.png?raw=true"
+        alt="Histograma numérico"
+        style="display: block; margin: 0 auto"
+        width=70%
+        length=70% />
+<em>Histograma de variables numéricas</em>
 </center>
 
 1. **Edad (age)**: La distribución de la edad parece ser ligeramente diferente entre los dos grupos. Los individuos con riesgo cardíaco tienden a ser mayores que aquellos sin riesgo cardíaco.
@@ -149,19 +166,23 @@ Haciendo uso de la funcion `seaborn.pairplot(df[numericos], hue='stroke', kind='
 De igual manera, y con las mismas conclusiones, se analizó la distribución de las variables categóricas mediante el uso de una gráfica de dispersión `seaborn.pairplot(df[numericos], hue='stroke', kind='scatter')`dónde la diagonal de la cuadrícula muestra la distribución de cada variable con un gráfico de densidad superpuesto y los gráficos fuera de la diagonal muestran la relación entre cada par de variables. Los puntos están coloreados por la variable objetivo.
 
 <center>
-
-![Gráfica de dispersión de variables numérica](https://github.com/esolanoo/HeartAttackAnalysisPrediction/blob/main/Numeric%20Scatter%20Pairplot.png?raw=true)
-*Gráfica de dispersión de variables numéricas*
-
+<img src="https://github.com/esolanoo/HeartAttackAnalysisPrediction/blob/main/Numeric%20Scatter%20Pairplot.png?raw=true"
+        alt="Gráfica de dispersión de variables numérica"
+        style="display: block; margin: 0 auto"
+        width=70%
+        length=70% />
+<em>Gráfica de dispersión de variables numéricas</em>
 </center>
 
 Finalmente se usa la estimación de densidad kernel (KDE) `seaborn.pairplot(df[numericos], hue='stroke', kind='kde')` que a diferencia de los histogramas, proporcionan una estimación suave, continua, y precisa de la densidad de probabilidad. Esto se logra utilizando una función de kernel, que es una función no negativa que se coloca en cada observación de la muestra.
 
 <center>
-
-![Gráfica de dispersión de kernel de variables numericas](https://github.com/esolanoo/HeartAttackAnalysisPrediction/blob/main/Numerical%20Features%20Kernel%20Distrinution%20Estimation%20Pairplot.png?raw=true)
-*Gráfica de densidad kernel de variables numericas*
-
+<img src="https://github.com/esolanoo/HeartAttackAnalysisPrediction/blob/main/Numerical%20Features%20Kernel%20Distrinution%20Estimation%20Pairplot.png?raw=true"
+        alt="Gráfica de dispersión de kernel de variables numericas"
+        style="display: block; margin: 0 auto"
+        width=70%
+        length=70% />
+<em>Gráfica de densidad kernel de variables numericas</em>
 </center>
 
 De igual manera se visualizaron las respresentaciones de variables no numéricas pero no se pueden obtener las mismas conslusiones debido a la falta de significado en las gráficas pues, a diferencia de las variables numéricas continuas, las variables categóricas no muestran una relación directa o patrones claros en los gráficos de dispersión, histogramas y kde. La naturaleza discreta y la ausencia de continuidad en los datos categóricos dificultan la representación visual significativa de tendencias o correlaciones a través de estas formas de visualización.
@@ -169,16 +190,32 @@ De igual manera se visualizaron las respresentaciones de variables no numéricas
 Se agregan las gráficas de igual manera para completar el reporte.
 
 <center>
+<img src="https://raw.githubusercontent.com/esolanoo/HeartAttackAnalysisPrediction/main/Categorical%20Histogram%20Pairplot.png"
+        alt="Gráfica de histogramas de variables no numéricas"
+        style="display: block; margin: 0 auto"
+        width=70%
+        length=70% />
+<em>Gráfica de histogramas de variables no numéricas</em>
+</center>
 
-![Gráfica de dispersión de kernel de variables numericas](https://raw.githubusercontent.com/esolanoo/HeartAttackAnalysisPrediction/main/Categorical%20Histogram%20Pairplot.png)
-*Gráfica de histogramas de variables no numéricas*
+<center>
+<img src="https://raw.githubusercontent.com/esolanoo/HeartAttackAnalysisPrediction/main/Categorical%20Scatter%20Pairplot.png"
+        alt="Gráfica de dispersión de kernel de variables numericas"
+        style="display: block; margin: 0 auto"
+        width=70%
+        length=70% />
+<em>Gráfica de dispersión de gráficas no numéricas</em>
+</center>
 
-![Gráfica de dispersión de kernel de variables numericas](https://raw.githubusercontent.com/esolanoo/HeartAttackAnalysisPrediction/main/Categorical%20Scatter%20Pairplot.png)
-*Gráfica de dispersión de gráficas no numéricas*
+<br>
 
-![Gráfica de dispersión de kernel de variables numericas](https://raw.githubusercontent.com/esolanoo/HeartAttackAnalysisPrediction/main/Categorical%20Features%20Kernel%20Distrinution%20Estimation%20Pairplot.png)
-*Gráfica de debsidad de kernel de variables no numéricas*
-
+<center>
+<img src="https://raw.githubusercontent.com/esolanoo/HeartAttackAnalysisPrediction/main/Categorical%20Features%20Kernel%20Distrinution%20Estimation%20Pairplot.png"
+        alt="Gráfica de dispersión de kernel de variables numericas"
+        style="display: block; margin: 0 auto"
+        width=70%
+        length=70% />
+<em>Gráfica de debsidad de kernel de variables no numéricas</em>
 </center>
 
 <div style="page-break-after: always;"></div>
@@ -199,8 +236,6 @@ def Transform(data):
     data_t = pd.DataFrame(ct.fit_transform(data))
     data_t.columns = [s[s.find('_')+2:] for s in list(ct.get_feature_names_out())]
     return data_t
-        
-df_t = Transform(df)
 ```
 
 ### Matriz de correlación
@@ -208,10 +243,12 @@ df_t = Transform(df)
 Antes de seguir el procesamiento y comenzar a entrenar se realizó una matriz de correlación vara ver cuales podrían ser eliminadas debido a su alta correlación y poder simplificar el modelo. Desafortunadamente para ese objetivo, las variables no resultaron mutuamente correlacionadas; sin embargo, se puede utilizar el valor de relevancia que tienen las variables con la variable objetivo para descartar las que no son relevates.
 
 <center>
-
-![Matriz de correlación](https://raw.githubusercontent.com/esolanoo/HeartAttackAnalysisPrediction/main/Heatmap.png)
-*Matriz de correlación de las variables*
-
+<img src="https://raw.githubusercontent.com/esolanoo/HeartAttackAnalysisPrediction/main/Heatmap.png"
+        alt="Matriz de correlación"
+        style="display: block; margin: 0 auto"
+        width=80%
+        length=80% />
+<em>Matriz de correlación de las variables</em>
 </center>
 
 Se establece las variables no relevantes aquellas que su indice de correlación con respecto a la variable objetivo es menor a **0.05**, descartando las variables `['thall_0', 'fbs']` del *DataFrame*
@@ -223,10 +260,12 @@ Finalmente, el último paso antes de entrenar, es corregir errores de normalidad
 Esta transformacion solo se usó en los datos numericos continuos `numeric = ['age', 'trtbps', 'chol', 'thalachh', 'oldpeak']`.
 
 <center>
-
-![Transfrmación de datos continuos con Yeo-Johnson](https://raw.githubusercontent.com/esolanoo/HeartAttackAnalysisPrediction/main/Continuous%20data%20before%20and%20after%20Yeo-Johnson.png)
-*Transfrmación de datos continuos con Yeo-Johnson*
-
+<img src="https://raw.githubusercontent.com/esolanoo/HeartAttackAnalysisPrediction/main/Continuous%20data%20before%20and%20after%20Yeo-Johnson.png"
+        alt="Transfrmación de datos continuos con Yeo-Johnson"
+        style="display: block; margin: 0 auto"
+        width=80%
+        length=80% />
+<em>Transfrmación de datos continuos con Yeo-Johnson</em>
 </center>
 
 <div style="page-break-after: always;"></div>
@@ -282,10 +321,12 @@ Al usar cohen_kappa_score obtenemos **0.7124**. Esto indica que el modelo ha log
 Finalmente se usa 'roc_curve' para medir el desempeño del algoritmo. La gráfica ROC muestra que el modelo de clasificación binaria tiene un buen desempeño, ya que la curva ROC está muy por encima de la línea diagonal y tiene un AUC cercano a 1. Esto indica que el modelo puede separar las clases con una alta tasa de verdaderos positivos y una baja tasa de falsos positivos.
 
 <center>
-
-![Curva ROC](https://raw.githubusercontent.com/esolanoo/HeartAttackAnalysisPrediction/main/Model%20Roc%20Curve.png)
-*Curva ROC*
-
+<img src="https://raw.githubusercontent.com/esolanoo/HeartAttackAnalysisPrediction/main/Model%20Roc%20Curve.png"
+        alt="Curva ROC"
+        style="display: block; margin: 0 auto"
+        width=70%
+        length=70% />
+<em>Curva ROC</em>
 </center>
 
 <div style="page-break-after: always;"></div>
@@ -300,10 +341,8 @@ Si bien el modelo creado a partir de los datos trabajados y transforados demostr
 
 <div style="page-break-after: always;"></div>
 
-## Referencias 
+## Referencias
 
-> 1. Scikit-learn: Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., ... & Vanderplas, J. (2011). Scikit-learn: Machine learning in Python. Journal of Machine Learning Research, 12(Oct), 2825-2830. [Enlace a la documentación de Scikit-learn](https://scikit-learn.org/stable/documentation.html).
-
-> 2. Seaborn: Waskom, M., 2022. seaborn: statistical data visualization. [Enlace a la documentación de Seaborn](https://seaborn.pydata.org/introduction.html).
-
-> 3. Hastie, T., Tibshirani, R., & Friedman, J. (2009). The Elements of Statistical Learning: Data Mining, Inference, and Prediction (2nd ed.). Springer. ISBN: 978-0387848570.
+> 1. Rahman, R., & Pritom, R. (n.d.). Heart Attack Analysis & Prediction Dataset [Data set]. Kaggle. Retrieved from [Kaggle](https://www.kaggle.com/datasets/rashikrahmanpritom/heart-attack-analysis-prediction-dataset)
+> 2. Scikit-learn: Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., ... & Vanderplas, J. (2011). Scikit-learn: Machine learning in Python. Journal of Machine Learning Research, 12(Oct), 2825-2830. [Enlace a la documentación de Scikit-learn](https://scikit-learn.org/stable/documentation.html).
+> 3. Seaborn: Waskom, M., 2022. seaborn: statistical data visualization. [Enlace a la documentación de Seaborn](https://seaborn.pydata.org/introduction.html).
